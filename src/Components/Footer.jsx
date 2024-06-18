@@ -1,12 +1,17 @@
-import React from 'react'
+import '../index.css'
+import { useClinicContext } from '../Context/Context'
+
 
 const Footer = () => {
+
+  const {state} = useClinicContext();
   return (
-    <footer>
+    <footer className={state.dark? 'dark': 'light'}>
         <p>Powered by</p>
-        <img src="./img/DH.png" alt='DH-logo' />
+        <img src="../images/DH.png" alt='DH-logo' />
     </footer>
   )
 }
 
 export default Footer
+  

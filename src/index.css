@@ -7,6 +7,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+input{
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 19px;
+}
+
+label{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -19,22 +32,42 @@ code {
   cursor: pointer;
 }
 
-h1{
+p{
   text-align: center;
+  margin: 4%;
 }
+
+h1{
+  margin: 0%;
+  text-align: center;
+  padding: 4%;
+}
+h2, h3{
+  text-align: center;
+  margin: 0;
+}
+
+
 
 nav{
   display: flex;
-  width: 80vw;
-  justify-content: flex-start;
-  padding: 1rem;
+  justify-content: space-around;
+  background-color: rgb(167, 190, 250);
+  padding: 0.3rem;
 }
 
 a{
-  color: #000;
-  text-decoration: none;
+  color: #474747;
+  padding-right: 24px;
+  padding-left: 24px;
+  padding-bottom: 10px;
+  border-radius: 17px;
+  border-color: #474747;
+  text-decoration:none;
   margin: 5px;
   cursor: pointer;
+  height: 50px;
+
 }
 a:hover{
   color: rgb(136, 136, 136);
@@ -42,14 +75,12 @@ a:hover{
 
 footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
   padding: 2rem;
   position: relative;
   bottom: 0;
-  width: 90%;
-  height: 40px;
-  margin-top: 2rem;
+  height: 50px;
 }
 
 footer > img{
@@ -75,9 +106,12 @@ form{
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
-  width: 200px;
-  padding: 0.5rem 0.5rem 0 0.5rem;
-  border: 0.5px solid rgb(136, 136, 136);
+  border-radius: 2%;
+  width: 16vw;
+  height: 22vw;
+  padding: 1.5rem 1.5rem 0rem 1.5rem;
+  border: 1.5px solid rgb(136, 136, 136);
+  background-color:#c3cfdc;
 }
 
 .card:hover{
@@ -87,15 +121,15 @@ form{
 .card-grid{
   display: flex;
   justify-content: space-evenly;
-  gap: 1rem;
+  gap: 2rem;
   width: 90vw;
-  height: auto;
   flex-wrap: wrap;
   margin: 0 auto;
+  padding: 0px;
 }
 
 table {
- border-collapse: collapse;
+  border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
     display: table;
@@ -112,11 +146,31 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+.add-fav{
+  background-color: rgba(0, 0, 0, 0.328);
+  width: 170px;
+  height: 40px;
+  margin-top: 6.5rem;
+}
+button{
+  border-radius: 14px;
+  height: 50px;
+  width: 116px;
+  align-self: center;
+  color: white;
+  padding: 8px;
+  background-color:  rgba(0, 0, 0, 0.458) ;
+}
 
-.dark{
-  background-color: #12121296;
-  color: white;
-}
 .dark > a {
-  color: white;
+  color: rgb(235, 235, 235);
 }
+.light{
+  color: rgb(70, 70, 70);
+}
+.dark{
+  background-color: #000000da;
+  color: rgb(254, 254, 255);
+}
+
+
