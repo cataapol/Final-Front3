@@ -8,11 +8,14 @@ const reducer = (state, action) => {
         case 'TOGGLE_THEME':
             return {...state, dark: !state.dark};
         case 'GET_USERS':
-          return {...state, axios: action.payload}
+          return {...state, axios: action.payload};
+        case '':
+          return
         default:
             throw new Error();
   }
 }
+
 
 
 const initialState = {
@@ -37,6 +40,10 @@ const Context = ({children}) => {
     }, []);
 
 
+    // useEffect(() => {
+    //   localStorage.setItem('fav', JSON.stringify(fav));
+    //   }, [fav]);
+    
 
   return (
     <ClinicContext.Provider value={{ state, dispatch }}>

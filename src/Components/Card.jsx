@@ -6,23 +6,15 @@ import '../index.css'
 
 
 const Card = ({patient}) => {
-
-  const [fav, setFav] = useState([]);
-
-  
-  
-  useEffect(() => {
-    localStorage.setItem('fav', JSON.stringify(fav));
-  }, [fav]);
-
-  
+  const { id, name, username } = patient;
+  console.log(id);
 
 
   const addFav = ()=>{
     // Aqui iria la logica para agregar la Card en el localStorage
-    const newFavs = [...fav, patient];
+    setCart((prev) => {
 
-    setFav(newFavs)
+    })
   }
 
 
@@ -32,13 +24,12 @@ const Card = ({patient}) => {
 
   return (
     <div className="card">
-        {/* En cada card deberan mostrar en name - username y el id */}
-          <Link to={routes.detail + patient.id}>
+          <Link to={`${routes.detail}${patient.id}`}>
           <img src='../images/doctor.jpg'></img>
           <h3>{patient.name}</h3>
           <h3>{patient.username}</h3>
           </Link> 
-
+        
         {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
         
         <button className='add-fav' onClick={addFav}>
