@@ -6,19 +6,17 @@ import '../index.css'
 
 
 const Card = ({patient}) => {
+
+  
   const { id, name, username } = patient;
-  console.log(id);
+  const {dispatch} = useClinicContext();
 
 
   const addFav = ()=>{
     // Aqui iria la logica para agregar la Card en el localStorage
-    setCart((prev) => {
-
-    })
+    dispatch({ type: 'GET_FAVS', payload: patient });
   }
-
-
-  const {dispatch} = useClinicContext();
+  
 
 
 

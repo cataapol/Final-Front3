@@ -1,4 +1,4 @@
-import { createContext, useContext, useReducer, useEffect } from 'react';
+import { createContext, useContext, useReducer, useEffect, useState } from 'react';
 import axios from 'axios';
 
 const ClinicContext = createContext('light');
@@ -9,8 +9,8 @@ const reducer = (state, action) => {
             return {...state, dark: !state.dark};
         case 'GET_USERS':
           return {...state, axios: action.payload};
-        case '':
-          return
+        case 'GET_FAVS':
+          return {...state, favs: [...state.favs, action.payload]};
         default:
             throw new Error();
   }
@@ -20,9 +20,12 @@ const reducer = (state, action) => {
 
 const initialState = {
     dark: false,
-    axios: []
+    axios: [],
+    favs:[]
 }
 
+
+// const favsList = JSON.parse(localStorage.getItem("favs")) || [];
 
 
 
@@ -40,10 +43,11 @@ const Context = ({children}) => {
     }, []);
 
 
-    // useEffect(() => {
-    //   localStorage.setItem('fav', JSON.stringify(fav));
-    //   }, [fav]);
-    
+  
+
+  useEffect(() => {
+    localStorage.setItem("favs", JSON.stringify(state.favs));
+  }, [state.favs]);
 
   return (
     <ClinicContext.Provider value={{ state, dispatch }}>
