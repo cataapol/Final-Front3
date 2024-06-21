@@ -34,7 +34,8 @@ code {
 
 p{
   text-align: center;
-  margin: 4%;
+  padding: 7%;
+  margin: 0%;
 }
 
 h1{
@@ -43,10 +44,11 @@ h1{
   padding: 4%;
 }
 h2, h3{
+  margin-top: 0.5vw;
   text-align: center;
   margin: 0;
 
-  margin-top: 0.5vw;
+
 }
 
 
@@ -66,7 +68,7 @@ a{
   border-radius: 17px;
   border-color: #474747;
   text-decoration:none;
-  margin: 5px;
+  margin: 0px;
   cursor: pointer;
   height: 50px;
 
@@ -176,6 +178,8 @@ button{
 }
 
 
-img{
-  width: 7.5vw;
-}
+.dentist-img{
+  width: 8.5vw;
+  padding-left: 11%;
+  padding-bottom: 5%;
+} 

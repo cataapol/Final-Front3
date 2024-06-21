@@ -16,16 +16,15 @@ const reducer = (state, action) => {
   }
 }
 
+const favsList = JSON.parse(localStorage.getItem("favs")) || [];
+
 
 
 const initialState = {
     dark: false,
     axios: [],
-    favs:[]
+    favs:favsList
 }
-
-
-// const favsList = JSON.parse(localStorage.getItem("favs")) || [];
 
 
 

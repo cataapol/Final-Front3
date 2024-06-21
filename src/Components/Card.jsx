@@ -23,7 +23,7 @@ const Card = ({patient}) => {
   return (
     <div className="card">
           <Link to={`${routes.detail}${patient.id}`}>
-          <img src='../images/doctor.jpg'></img>
+          <img src='../images/doctor.jpg' className='dentist-img'></img>
           <h3>{patient.name}</h3>
           <h3>{patient.username}</h3>
           </Link> 
